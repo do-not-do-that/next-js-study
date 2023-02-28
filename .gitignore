@@ -25,3 +25,5 @@ client/out/
 
 # vercel
 .vercel
+
+server/src/data-source.ts
