@@ -27,3 +27,4 @@ client/out/
 .vercel
 
 server/src/data-source.ts
+server/public/

@@ -23,8 +23,6 @@ const Login = () => {
       const res = await axios.post(
         "/auth/login",
         { username, password },
-        // "http://172.30.1.70:7010/auth/login",
-        // { username, password },
         { withCredentials: true }
       );
 

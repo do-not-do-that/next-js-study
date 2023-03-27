@@ -21,6 +21,7 @@ interface Action {
   payload: any;
 }
 const reducer = (state: State, { type, payload }: Action) => {
+  console.log("상태 : ", state, "타입 : ", type, payload);
   switch (type) {
     case "LOGIN":
       return {
