@@ -24,8 +24,6 @@ const PostPage = () => {
     identifier && slug ? `/posts/${identifier}/${slug}/comments` : null
   );
 
-  console.log("comments: ", comments);
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (newComment.trim() === "") return;
@@ -129,7 +127,7 @@ const PostPage = () => {
                 </div>
               </div>
               {/* 댓글 작성 구간 */}
-              <div className="pr-6 mb-4">
+              <div className="pr-6 mb-4 pl-9">
                 {authenticated ? (
                   <div>
                     <p className="mb-1 text-xs">
