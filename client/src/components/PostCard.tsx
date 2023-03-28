@@ -10,7 +10,8 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 interface PostCardProps {
   post: Post;
-  subMutate: () => void;
+  subMutate?: () => void;
+  mutate?: () => void;
 }
 
 const PostCard = ({
@@ -28,6 +29,7 @@ const PostCard = ({
     username,
     sub,
   },
+  mutate,
   subMutate,
 }: PostCardProps) => {
   const router = useRouter();
@@ -40,7 +42,8 @@ const PostCard = ({
 
     try {
       await axios.post("/votes", { identifier, slug, value });
-      subMutate();
+      if (mutate) mutate();
+      if (subMutate) subMutate();
     } catch (error) {
       console.log(error);
     }
